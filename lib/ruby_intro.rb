@@ -1,5 +1,7 @@
 # When done, submit this entire file to the autograder.
 
+#----------------------------------------------
+
 # Part 1
 
 # takes array of integers, returns sum of its elements, returns zero for empty array.
@@ -9,7 +11,7 @@ end
 
 # takes array of integers, returns sum of two largest elements, return zero for empty array, return elem for size 1 array.
 def max_2_sum arr
-   sum(arr.sort.last(2))
+  sum(arr.sort.last(2))
 end
 
 # takes array of integers & additional integer n, returns true if any two elements in array sum to n,
@@ -18,6 +20,8 @@ def sum_to_n? arr, n
   arr = [0] if (arr.nil? || arr.empty?)
   arr.combination(2).any? { |a,b| (a+b) == n }
 end
+
+#----------------------------------------------
 
 # Part 2
 
@@ -41,6 +45,8 @@ def binary_multiple_of_4? s
   false
 end
 
+#----------------------------------------------
+
 # Part 3
 
 # Define a class BookInStock which represents a book with an ISBN number, isbn, and price of the book as a floating-point number, price, as attributes.
@@ -58,9 +64,8 @@ class BookInStock
     @isbn = isbn
     @price = price
   end
-
+ 
   def price_as_string
     format("$%.2f", @price)
   end
-
 end
